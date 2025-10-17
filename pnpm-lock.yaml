@@ -12,6 +12,9 @@ importers:
 
   .:
     dependencies:
+      '@babel/core':
+        specifier: ^7.25.2
+        version: 7.28.4
       '@dev-plugins/react-query':
         specifier: ^0.3.1
         version: 0.3.1(@tanstack/react-query@5.89.0(react@19.0.0))(expo@53.0.23(@babel/core@7.28.4)(graphql@16.8.1)(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))
@@ -175,9 +178,6 @@ importers:
         specifier: ^3.4.17
         version: 3.4.17(ts-node@10.9.2(@types/node@24.5.1)(typescript@5.8.3))
     devDependencies:
-      '@babel/core':
-        specifier: ^7.25.2
-        version: 7.28.4
       '@types/react':
         specifier: ~19.0.10
         version: 19.0.14
