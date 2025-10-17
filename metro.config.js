@@ -1,23 +1,24 @@
-// Custom Metro configuration to speed up and unstick bundler by excluding huge / unused folders.
-// Large folders (v10, backend, legacy project folders) were causing the watcher to hang on Windows.
-// We block them so Metro doesn't traverse them.
+// Custom Metro configuration to exclude large/unused folders from the bundler.
+// Use the public API for exclusionList to avoid importing Metro internals (works with pnpm and on EAS).
 
 const { getDefaultConfig } = require('expo/metro-config');
-const exclusionList = require('metro-config/src/defaults/exclusionList');
+const { exclusionList } = require('metro-config');
 
 const config = getDefaultConfig(__dirname);
 
+// Cross-platform folder separators: match both \\ and /
+const SEP = String.raw`[/\\\\]`;
+
 // Add directories that should NOT be watched / bundled.
 config.resolver.blockList = exclusionList([
-  /\\soj-backend-final-v2\\.*/,
-  /\\BigTrash\\.*/,
-  /\\leadtrash\\.*/,
-  /\\llllll\\.*/,
-  /\\v10\\.*/,
+  new RegExp(`${SEP}soj-backend-final-v2${SEP}.*`),
+  new RegExp(`${SEP}BigTrash${SEP}.*`),
+  new RegExp(`${SEP}leadtrash${SEP}.*`),
+  new RegExp(`${SEP}llllll${SEP}.*`),
+  new RegExp(`${SEP}v10${SEP}.*`),
 ]);
 
-// (Optional) Lower worker count on some Windows environments to reduce stalls.
+// (Optional) Lower worker count on some environments to reduce stalls.
 config.maxWorkers = 2;
 
-// If you later actually need assets from any excluded folder, remove it from the list.
 module.exports = config;
