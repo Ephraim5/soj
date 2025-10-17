@@ -1,9 +1,21 @@
 module.exports = function (api) {
   api.cache(true);
+
+  let moduleResolver;
+  try {
+    // Try to load babel-plugin-module-resolver safely
+    moduleResolver = require.resolve('babel-plugin-module-resolver');
+  } catch (e) {
+    console.warn(
+      '⚠️ Warning: babel-plugin-module-resolver not found. Aliases will be disabled for this build.'
+    );
+  }
+
   return {
     presets: ['babel-preset-expo'],
     plugins: [
-      [
+      // Only apply module-resolver if it exists
+      moduleResolver && [
         'module-resolver',
         {
           root: ['./src'],
@@ -17,7 +29,8 @@ module.exports = function (api) {
           },
         },
       ],
-      'react-native-reanimated/plugin', 
-    ],
+      // Keep this last — required by React Native Reanimated
+      'react-native-reanimated/plugin',
+    ].filter(Boolean),
   };
 };
