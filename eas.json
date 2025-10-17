@@ -1,7 +1,9 @@
 {
   "$schema": "https://raw.githubusercontent.com/expo/eas-build/main/packages/eas-json/schema/eas.schema.json",
   "cli": {
-    "requireCommit": false
+    "requireCommit": false,
+    "version": "16.23.1",
+    "appVersionSource": "remote"
   },
   "build": {
     "apk": {

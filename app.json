@@ -27,10 +27,7 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "notification": {
-        "icon": "./src/assets/icon.png",
-        "color": "#349DC5"
-      }
+      "package": "com.ephraim5.StreamsOfJoyManagment"
     },
     "web": {
       "favicon": "./src/assets/favicon.png"
@@ -38,11 +35,18 @@
     "assetBundlePatterns": [
       "**/*"
     ],
+    "notification": {
+      "icon": "./src/assets/icon.png",
+      "color": "#349DC5"
+    },
     "plugins": [
       "expo-font",
       "expo-notifications"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "36d25a76-d801-4772-866f-0267b2725129"
+      }
+    }
   }
-
- 
 }
