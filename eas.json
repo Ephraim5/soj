@@ -1,0 +1,14 @@
+{
+  "$schema": "https://raw.githubusercontent.com/expo/eas-build/main/packages/eas-json/schema/eas.schema.json",
+  "cli": {
+    "requireCommit": false
+  },
+  "build": {
+    "apk": {
+      "android": {
+        "buildType": "apk"
+      }
+    }
+  },
+  "submit": {}
+}

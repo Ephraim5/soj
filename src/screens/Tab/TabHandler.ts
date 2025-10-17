@@ -1,0 +1,3 @@
+function isSuperAdmin(){
+    return true;
+}

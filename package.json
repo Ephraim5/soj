@@ -1,0 +1,126 @@
+{
+  "name": "streamsofjoymanagment",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@dev-plugins/react-query": "^0.3.1",
+    "@expo-google-fonts/inter": "^0.4.2",
+    "@expo-google-fonts/montserrat": "^0.4.1",
+    "@expo/vector-icons": "^14.1.0",
+    "@gorhom/bottom-sheet": "^5.1.8",
+    "@react-native-async-storage/async-storage": "2.1.2",
+    "@react-native-community/datetimepicker": "8.4.1",
+    "@react-native-community/netinfo": "11.4.1",
+    "@react-native-picker/picker": "2.11.1",
+    "@react-navigation/bottom-tabs": "^7.4.5",
+    "@react-navigation/native": "^7.1.17",
+    "@react-navigation/native-stack": "^7.3.24",
+    "@shopify/flash-list": "1.7.6",
+    "@tanstack/react-query": "^5.84.1",
+    "axios": "^1.11.0",
+    "eas": "^0.1.0",
+    "eas-cli": "^16.23.1",
+    "expo": "53.0.23",
+    "expo-blur": "~14.1.5",
+    "expo-constants": "~17.1.7",
+    "expo-device": "~7.1.4",
+    "expo-doctor": "^1.17.9",
+    "expo-document-picker": "~13.1.6",
+    "expo-font": "~13.3.2",
+    "expo-haptics": "^14.1.4",
+    "expo-image-manipulator": "~13.1.7",
+    "expo-image-picker": "~16.1.4",
+    "expo-intent-launcher": "~12.1.5",
+    "expo-linear-gradient": "~14.1.5",
+    "expo-local-authentication": "~16.0.5",
+    "expo-notifications": "~0.31.4",
+    "expo-print": "~14.1.4",
+    "expo-sharing": "~13.1.5",
+    "expo-skeleton-loading": "^1.1.1",
+    "expo-splash-screen": "~0.30.10",
+    "expo-status-bar": "~2.2.3",
+    "moment": "^2.30.1",
+    "nativewind": "^4.1.23",
+    "react": "19.0.0",
+    "react-native": "0.79.5",
+    "react-native-element-dropdown": "^2.12.4",
+    "react-native-elements": "^3.4.3",
+    "react-native-gesture-handler": "~2.24.0",
+    "react-native-keyboard-aware-scroll-view": "^0.9.5",
+    "react-native-modal": "^14.0.0-rc.1",
+    "react-native-modal-datetime-picker": "^18.0.0",
+    "react-native-modern-datepicker": "^1.0.0-beta.91",
+    "react-native-picker-select": "^9.3.1",
+    "react-native-reanimated": "~3.17.4",
+    "react-native-responsive-screen": "^1.4.2",
+    "react-native-safe-area-context": "5.4.0",
+    "react-native-screens": "~4.11.1",
+    "react-native-svg": "15.11.2",
+    "react-native-toast-message": "^2.3.3",
+    "react-native-uuid": "^2.0.3",
+    "tailwindcss": "^3.4.17"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.25.2",
+    "@types/react": "~19.0.10",
+    "@types/react-native-vector-icons": "^6.4.18",
+    "autoprefixer": "^10.4.21",
+    "babel-plugin-module-resolver": "^5.0.2",
+    "postcss": "^8.5.6",
+    "typescript": "~5.8.3"
+  },
+  "expo": {
+    "name": "StreamsOfJoyManagment",
+    "slug": "StreamsOfJoyManagment",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./src/assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./src/assets/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#ffffff"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "splash": {
+        "image": "./src/assets/splash.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "android": {
+      "splash": {
+        "image": "./src/assets/splash.png",
+        "resizeMode": "cover",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "favicon": "./src/assets/favicon.png"
+    },
+    "plugins": [
+      "expo-font"
+    ],
+    "doctor": {
+      "reactNativeDirectoryCheck": {
+        "listUnknownPackages": false,
+        "exclude": [
+          "@dev-plugins/react-query",
+          "react-native-keyboard-aware-scroll-view",
+          "react-native-responsive-screen",
+          "react-native-element-dropdown"
+        ]
+      }
+    }
+  },
+  "private": true,
+  "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef"
+}

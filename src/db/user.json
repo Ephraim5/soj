@@ -1,0 +1,73 @@
+{"users":[
+  {
+    "id": "1",
+    "name": "Pst Jerry Eze",
+    "email": "chidera.okafor@example.com",
+    "accessCode":"100",
+    "phoneNumber":"100",
+    "role": "admin",
+    "type": "admin",
+    "password": "hashed_password_1",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.1",
+    "registrationCompleted": true,
+    "place": "Umuahia",
+    "profileImage": "https://randomuser.me/api/portraits/women/44.jpg"
+  },
+  {
+    "id": "2",
+    "name": "Min. Smith",
+    "email": "emeka.nwosu@example.com",
+    "role": "leader",
+    "type": "leader",
+     "accessCode":"200",
+     "phoneNumber":"200",
+    "password": "hashed_password_2",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.2",
+    "registrationCompleted": true,
+    "place": "Lagos",
+    "profileImage": "https://randomuser.me/api/portraits/men/52.jpg"
+  },
+  {
+    "id": "3",
+    "name": "Blessing Uche",
+    "email": "blessing.uche@example.com",
+    "role": "member",
+    "type": "member",
+    "accessCode":"300",
+    "phoneNumber":"300",
+    "password": "hashed_password_3",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.3",
+    "registrationCompleted": false,
+    "place": "Port Harcourt",
+    "profileImage": "https://randomuser.me/api/portraits/women/10.jpg"
+  },
+  {
+    "id": "4",
+    "name": "Ikenna Opara",
+    "email": "ikenna.opara@example.com",
+    "role": "followup",
+    "type": "member",
+    "password": "hashed_password_4",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.4",
+    "registrationCompleted": true,
+    "accessCode":"400",
+    "phoneNumber":"400",
+    "place": "Owerri",
+    "profileImage": "https://randomuser.me/api/portraits/men/30.jpg"
+  },
+  {
+    "id": "5",
+    "name": "Ngozi Obi",
+    "email": "ngozi.obi@example.com",
+    "role": "admin",
+    "type": "admin",
+    "accessCode":"500",
+    "phoneNumber":"500",
+    "password": "hashed_password_5",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.5",
+    "registrationCompleted": false,
+    "place": "Enugu",
+    "profileImage": "https://randomuser.me/api/portraits/women/22.jpg"
+  }
+]
+}

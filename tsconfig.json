@@ -1,0 +1,21 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": "./src",
+    "types": ["nativewind/types"],
+    "paths": {
+      "@components/*": ["screens/main/UnitLeader/components/*"],
+      "@theme/*": ["screens/main/UnitLeader/theme/*"],
+      "@sales/*": ["screens/main/UnitLeader/sales/*"],
+      "@screens/*": ["screens/*"],
+      "@utils/*": ["utils/*"],
+      "@api/*": ["api/*"]
+    }
+  },
+  "include": [
+    "nativewind.d.ts",
+    "App.tsx",
+    "src"
+  ]
+}
