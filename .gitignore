@@ -2,7 +2,7 @@
 
 # dependencies
 node_modules/
-
+/v10
 # Expo
 .expo/
 .expo
@@ -39,3 +39,7 @@ yarn-error.*
 *.tsbuildinfo
 v10
 .v10
+
+v10_modules
+android/
+ios/
