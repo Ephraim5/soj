@@ -41,7 +41,15 @@
     },
     "plugins": [
       "expo-font",
-      "expo-notifications"
+      "expo-notifications",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#ffffff",
+          "image": "./src/assets/splash.png",
+          "resizeMode": "cover"
+        }
+      ]
     ],
     "extra": {
       "eas": {
