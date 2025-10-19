@@ -60,6 +60,9 @@ importers:
       axios:
         specifier: ^1.11.0
         version: 1.12.2
+      babel-plugin-module-resolver:
+        specifier: ^5.0.2
+        version: 5.0.2
       expo:
         specifier: 53.0.23
         version: 53.0.23(@babel/core@7.28.4)(graphql@16.8.1)(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)
@@ -187,9 +190,6 @@ importers:
       autoprefixer:
         specifier: ^10.4.21
         version: 10.4.21(postcss@8.5.6)
-      babel-plugin-module-resolver:
-        specifier: ^5.0.2
-        version: 5.0.2
       postcss:
         specifier: ^8.5.6
         version: 8.5.6

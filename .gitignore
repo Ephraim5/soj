@@ -45,3 +45,5 @@ android/
 ios/
 build/
 README-FIXES.txt
+.github/
+.fastlane/
