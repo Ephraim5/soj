@@ -19,7 +19,7 @@ const withEnsureSplashTheme = (config) => {
       const valuesV31Dir = path.join(platformProjectRoot, 'app', 'src', 'main', 'res', 'values-v31');
 
       // Define the attr used by expo-splash-screen styles
-      const attrsXml = `<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <attr name="postSplashScreenTheme" format="reference"/>\n</resources>\n`;
+  const attrsXml = `<?xml version="1.0" encoding="utf-8"?>\n<resources>\n    <!-- Compat attrs used by some splash styles -->\n    <attr name="windowSplashScreenBackground" format="color|reference"/>\n    <attr name="windowSplashScreenAnimatedIcon" format="reference"/>\n    <attr name="windowSplashScreenAnimationDuration" format="integer"/>\n    <attr name="windowSplashScreenIconBackgroundColor" format="color|reference"/>\n    <!-- Used by expo-splash-screen to set the app theme after splash -->\n    <attr name="postSplashScreenTheme" format="reference"/>\n</resources>\n`;
       ensureFile(path.join(valuesDir, 'attrs_expo_splash.xml'), attrsXml);
 
       // Base Theme.SplashScreen for all API levels (no windowSplashScreen* attrs here)
