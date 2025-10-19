@@ -7,7 +7,6 @@
   },
   "build": {
     "apk": {
-      "resourceClass": "large",
       "env": {
         "NODE_ENV": "production"
       },

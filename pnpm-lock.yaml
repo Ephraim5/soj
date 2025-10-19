@@ -24,6 +24,9 @@ importers:
       '@expo-google-fonts/montserrat':
         specifier: ^0.4.1
         version: 0.4.2
+      '@expo/config-plugins':
+        specifier: ~10.1.1
+        version: 10.1.2
       '@expo/vector-icons':
         specifier: ^14.1.0
         version: 14.1.0(expo-font@13.3.2(expo@53.0.23(@babel/core@7.28.4)(graphql@16.8.1)(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react@19.0.0))(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0)

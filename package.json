@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@babel/core": "^7.25.2",
+    "@expo/config-plugins": "~10.1.1",
     "@dev-plugins/react-query": "^0.3.1",
     "@expo-google-fonts/inter": "^0.4.2",
     "@expo-google-fonts/montserrat": "^0.4.1",
