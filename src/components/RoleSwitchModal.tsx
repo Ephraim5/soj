@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Modal, View, Text, TouchableOpacity, ActivityIndicator, ScrollView, StyleSheet } from 'react-native';
-import Icon from 'react-native-vector-icons/Ionicons';
+import { Ionicons as Icon } from '@expo/vector-icons';
 import { Colors } from '@theme/colors';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import axios from 'axios';

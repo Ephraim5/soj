@@ -1,4 +1,2 @@
-import {report} from './report.json'
-import {users} from './user.json'
-
-export {report ,users};
+// Removed: mock db exports were unused across the app.
+export {};

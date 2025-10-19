@@ -17,7 +17,6 @@ import NotificationDetailScreen from '../screens/main/Home/NotificationDetail';
 import NotificationScreen from '../screens/main/Home/Notification';
 import ComposeEmailScreen from '../screens/main/Home/ComposeEmailScreen';
 import AllUnitDashboardsScreen from '../screens/main/Home/AllUnitDashboard';
-import AddAdmin from '../screens/AuthScreens/SuperAdmin/AddUnitLeaders';
 import AdminUnitLead from '../screens/AuthScreens/SuperAdmin/AddUnitNext';
 import AddUnitScreen from '../screens/main/SuperAdmin/AddUnitScreen';
 import EventsAnnouncementsScreen from '../screens/AuthScreens/SuperAdmin/EventAndAnnoucement';

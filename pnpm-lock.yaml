@@ -81,6 +81,9 @@ importers:
       expo-document-picker:
         specifier: ~13.1.6
         version: 13.1.6(expo@53.0.23(@babel/core@7.28.4)(graphql@16.8.1)(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))
+      expo-file-system:
+        specifier: ^18.1.11
+        version: 18.1.11(expo@53.0.23(@babel/core@7.28.4)(graphql@16.8.1)(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))
       expo-font:
         specifier: ~13.3.2
         version: 13.3.2(expo@53.0.23(@babel/core@7.28.4)(graphql@16.8.1)(react-native@0.79.6(@babel/core@7.28.4)(@types/react@19.0.14)(react@19.0.0))(react@19.0.0))(react@19.0.0)

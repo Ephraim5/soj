@@ -11,7 +11,7 @@ import {
     SafeAreaView,
 } from "react-native";
 import { PRIMARY_BLUE } from "../../AuthScreens/SuperAdmin/styles";
-import Icon from 'react-native-vector-icons/Ionicons';
+import { Ionicons as Icon } from '@expo/vector-icons';
 import { heightPercentageToDP } from "react-native-responsive-screen";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { listMarriages, createMarriage, updateMarriage as apiUpdateMarriage, deleteMarriage as apiDeleteMarriage, Marriage as MarriageDoc } from '../../../api/marriages';

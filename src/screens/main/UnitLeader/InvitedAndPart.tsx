@@ -11,10 +11,9 @@ import {
     SafeAreaView,
 } from "react-native";
 import { PRIMARY_BLUE } from "../../AuthScreens/SuperAdmin/styles";
-import Icon from 'react-native-vector-icons/Ionicons';
 import { heightPercentageToDP } from "react-native-responsive-screen";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import { createEvent, listEvents, EventDoc } from "../../../api/events";
+import { createEvent, listEvents, EventItem } from "../../../api/events";
 
 // --- Mock JSON data ---
 type Event = {
@@ -58,8 +57,8 @@ export default function InviteAndPart({navigation}:any) {
                 const tk = (t1 || (t2 as any)) || undefined;
                 setToken(tk);
                 if(tk){
-                    const res = await listEvents(tk);
-                    const mapped: Event[] = (res.events||[]).map((e: EventDoc)=> ({
+                    const res = await listEvents();
+                    const mapped: Event[] = res.map((e: EventItem)=> ({
                         id: e._id,
                         title: e.title,
                         date: e.date ? String(e.date).slice(0,10) : '',
@@ -97,7 +96,7 @@ export default function InviteAndPart({navigation}:any) {
         if (!token) return;
         if (!eventTitle || !eventDate) return;
         try {
-            const res = await createEvent({ title: eventTitle, venue: eventLocation, description: eventDescription, date: eventDate }, token);
+            const res = await createEvent({ title: eventTitle, venue: eventLocation, description: eventDescription, date: eventDate });
             if(res?.ok && res.event){
                 const e = res.event;
                 const newItem: Event = { id: e._id, title: e.title, date: e.date ? String(e.date).slice(0,10) : '', time: eventTime, location: e.venue || '', description: e.description || '', url: '' };
@@ -116,7 +115,7 @@ export default function InviteAndPart({navigation}:any) {
                     style={styles.backButton}
                     onPress={() => navigation.goBack()}
                 >
-                    <Icon name="chevron-back" size={24} color="#333" />
+                    <Ionicons name="chevron-back" size={24} color="#333" />
                 </TouchableOpacity>
             </View>
             <View style={styles.row}>

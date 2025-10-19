@@ -10,7 +10,6 @@ import { BASE_URl } from '../../../api/users';
 import { RootStackParamList } from '../../../navigation/Navigation';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
 type NavigationProp = NativeStackNavigationProp<RootStackParamList, 'MainTabs'>;
 

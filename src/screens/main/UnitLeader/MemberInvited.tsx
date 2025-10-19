@@ -7,16 +7,13 @@ import {
   StatusBar,
   TextInput,
   Dimensions,
-  ActivityIndicator,
 } from "react-native";
-import Icon from "react-native-vector-icons/Ionicons";
 import type { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { IconSpec } from "./ReportScreen";
 import { RenderIcon } from "./RenderIcon";
 import { FlashList, ListRenderItem } from "@shopify/flash-list";
-import { MaterialIcons } from "@expo/vector-icons";
-import FontAwesome5 from "react-native-vector-icons/FontAwesome5";
+import { MaterialIcons, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 import moment from "moment";
 import Modal from "react-native-modal";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
@@ -211,7 +208,7 @@ const MemberInvited: React.FC<Props> = ({ navigation }) => {
       {/* Header */}
       <View style={styles.header}>
         <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
-          <Icon name="chevron-back" size={24} color="#333" />
+          <Ionicons name="chevron-back" size={24} color="#333" />
         </TouchableOpacity>
         <Text style={styles.headerTitle}>Reports</Text>
       </View>
@@ -226,7 +223,7 @@ const MemberInvited: React.FC<Props> = ({ navigation }) => {
         </View>
         <TouchableOpacity style={styles.yearSelector}>
           <Text style={styles.yearText}>{year}</Text>
-          <Icon name="chevron-down" size={16} color="#666" />
+          <Ionicons name="chevron-down" size={16} color="#666" />
         </TouchableOpacity>
       </View>
 
@@ -234,7 +231,7 @@ const MemberInvited: React.FC<Props> = ({ navigation }) => {
       <View style={styles.searchContainer}>
         <TextInput style={styles.searchInput} placeholder="Search by name" placeholderTextColor="#999" />
         <TouchableOpacity style={styles.searchButton}>
-          <Icon name="search" size={20} color="#999" />
+          <Ionicons name="search" size={20} color="#999" />
         </TouchableOpacity>
       </View>
 
@@ -244,7 +241,7 @@ const MemberInvited: React.FC<Props> = ({ navigation }) => {
           Souls Won: <Text style={styles.soulsCount}>10</Text>
         </Text>
         <TouchableOpacity style={styles.addButton} onPress={handleAddNewSoul}>
-          <Icon name="add" size={20} color="white" />
+          <Ionicons name="add" size={20} color="white" />
           <Text style={styles.addButtonText}>Add New</Text>
         </TouchableOpacity>
       </View>
@@ -254,7 +251,7 @@ const MemberInvited: React.FC<Props> = ({ navigation }) => {
         <Text style={styles.convertsTitle}>Details</Text>
         <TouchableOpacity style={styles.filterButton}>
           <Text style={styles.filterText}>Filter by Date</Text>
-          <Icon name="calendar" size={16} color="#349DC5" />
+          <Ionicons name="calendar" size={16} color="#349DC5" />
         </TouchableOpacity>
       </View>
 

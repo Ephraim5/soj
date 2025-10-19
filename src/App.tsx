@@ -1,6 +1,6 @@
 import 'react-native-reanimated';
 import * as SplashScreen from 'expo-splash-screen';
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useEffect } from 'react';
 import Navigation from './navigation/Navigation';
 import AppBootstrapGate from './components/AppBootstrapGate';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';

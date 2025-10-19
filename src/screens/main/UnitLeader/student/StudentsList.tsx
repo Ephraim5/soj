@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react';
 import { SafeAreaView, View, Text, StyleSheet, FlatList, TouchableOpacity, TextInput } from 'react-native';
 import { Student } from './types';
 import { useNavigation } from '@react-navigation/native';
+import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import type { RootStackParamList } from '../../../../navigation/Navigation';
 import { CARD_BG, SCREEN_BG, MUTED_GRAY,PRIMARY_BLUE } from './colors';
 import { Ionicons } from '@expo/vector-icons';
 
@@ -14,7 +16,7 @@ const initial: Student[] = [
  const StudentsList: React.FC = () => {
   const [students, setStudents] = useState<Student[]>([]);
   const [query, setQuery] = useState('');
-  const nav = useNavigation();
+  const nav = useNavigation<NativeStackNavigationProp<RootStackParamList>>();
 
   useEffect(() => {
     setStudents(initial);

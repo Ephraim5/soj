@@ -2,7 +2,6 @@ import * as Print from "expo-print";
 import * as Sharing from "expo-sharing";
 import { Platform, Alert } from "react-native";
 import * as FileSystem from 'expo-file-system';
-import Toast from 'react-native-toast-message';
 
 interface Sale {
   merchName: string;
@@ -92,7 +91,8 @@ export async function exportSalesReport(
   const { uri } = await Print.printToFileAsync({ html });
 
   const fileName = `Emporium_Sales_Report_${Date.now()}.pdf`;
-  const localPath = `${FileSystem.documentDirectory}${fileName}`;
+  const cacheDir = (FileSystem as any).cacheDirectory || (FileSystem as any).documentDirectory || '';
+  const localPath = `${cacheDir}${fileName}`;
   await FileSystem.moveAsync({ from: uri, to: localPath });
 
   // Ask the user: Save or Share?
@@ -106,7 +106,8 @@ export async function exportSalesReport(
           if (Platform.OS === "android") {
             try {
               // let user pick a directory
-              const permissions = await FileSystem.StorageAccessFramework.requestDirectoryPermissionsAsync();
+              // @ts-ignore - SAF available on Android builds
+              const permissions = await (FileSystem as any).StorageAccessFramework.requestDirectoryPermissionsAsync();
               if (!permissions.granted) {
                 Toast.show({
                   type: "info",
@@ -118,7 +119,7 @@ export async function exportSalesReport(
               }
 
               // create file in that directory
-              const fileUri = await FileSystem.StorageAccessFramework.createFileAsync(
+              const fileUri = await (FileSystem as any).StorageAccessFramework.createFileAsync(
                 permissions.directoryUri,
                 fileName,
                 "application/pdf"
@@ -126,11 +127,13 @@ export async function exportSalesReport(
 
               // read pdf as base64 and write it into chosen file
               const pdfBase64 = await FileSystem.readAsStringAsync(localPath, {
-                encoding: FileSystem.EncodingType.Base64,
+                // @ts-ignore
+                encoding: (FileSystem as any).EncodingType.Base64,
               });
 
               await FileSystem.writeAsStringAsync(fileUri, pdfBase64, {
-                encoding: FileSystem.EncodingType.Base64,
+                // @ts-ignore
+                encoding: (FileSystem as any).EncodingType.Base64,
               });
               Toast.show({
                 type: "success",

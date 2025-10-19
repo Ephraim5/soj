@@ -26,6 +26,7 @@ module.exports = function (api) {
             '@sales': './src/screens/main/UnitLeader/sales',
             '@screens': './src/screens',
             '@utils': './src/utils',
+            '@api': './src/api',
           },
         },
       ],

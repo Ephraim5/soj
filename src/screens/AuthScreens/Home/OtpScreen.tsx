@@ -9,12 +9,10 @@ import {
   KeyboardAvoidingView,
   Platform,
   SafeAreaView,
-  Alert,
   StatusBar,
 } from 'react-native';
 import { AntDesign, Ionicons } from '@expo/vector-icons';
 import { useNavigation } from '@react-navigation/native';
-import { users } from '../../../db/indes';
 import { widthPercentageToDP } from 'react-native-responsive-screen';
 import Toast from 'react-native-toast-message';
 import { sendOtp, verifyOtp } from '../../../api/users';
@@ -23,17 +21,17 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 const OtpScreen = () => {
   const navigation = useNavigation<any>();
   const [phone, setPhone] = useState<string>("");
-  const [success, setSuccess] = useState<string>("");
   const [otp, setOtp] = useState<string[]>(['', '', '', '', '']);
 
   async function init() {
-      const p = AsyncStorage.getItem("phone");
-      console.log(p)
-      setPhone(p.toString())
-      const u = await sendOtp({ phone })
-      console.log(JSON.parse(u?.data))
-      setSuccess(u?.data.success)
+    try {
+      const saved = await AsyncStorage.getItem('phone');
+      if (saved) setPhone(saved);
+      await sendOtp({ phone: saved || phone });
+    } catch (e) {
+      // ignore
     }
+  }
   useEffect(() => {
     init()
   }, [])
