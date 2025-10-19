@@ -46,6 +46,7 @@
     "expo-skeleton-loading": "^1.1.1",
     "expo-splash-screen": "~0.30.10",
     "expo-status-bar": "~2.2.3",
+  "expo-build-properties": "^1.0.9",
     "moment": "^2.30.1",
     "nativewind": "^4.1.23",
     "react": "19.0.0",
@@ -73,54 +74,6 @@
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
     "typescript": "~5.8.3"
-  },
-  "expo": {
-    "name": "StreamsOfJoyManagment",
-    "slug": "StreamsOfJoyManagment",
-    "version": "1.0.0",
-    "orientation": "portrait",
-    "icon": "./src/assets/icon.png",
-    "userInterfaceStyle": "light",
-    "splash": {
-      "image": "./src/assets/splash.png",
-      "resizeMode": "cover",
-      "backgroundColor": "#ffffff"
-    },
-    "ios": {
-      "supportsTablet": true,
-      "splash": {
-        "image": "./src/assets/splash.png",
-        "resizeMode": "cover",
-        "backgroundColor": "#ffffff"
-      }
-    },
-    "android": {
-      "splash": {
-        "image": "./src/assets/splash.png",
-        "resizeMode": "cover",
-        "backgroundColor": "#ffffff"
-      },
-      "edgeToEdgeEnabled": true
-    },
-    "web": {
-      "favicon": "./src/assets/favicon.png"
-    },
-    "plugins": [
-      "expo-font"
-    ],
-    "doctor": {
-      "reactNativeDirectoryCheck": {
-        "listUnknownPackages": false,
-        "exclude": [
-          "@dev-plugins/react-query",
-          "react-native-keyboard-aware-scroll-view",
-          "react-native-responsive-screen",
-          "react-native-element-dropdown",
-          "react-native-modern-datepicker",
-          "@types/react-native-vector-icons"
-        ]
-      }
-    }
   },
   "private": true,
   "packageManager": "pnpm@10.17.0+sha512.fce8a3dd29a4ed2ec566fb53efbb04d8c44a0f05bc6f24a73046910fb9c3ce7afa35a0980500668fa3573345bd644644fa98338fa168235c80f4aa17aa17fbef",

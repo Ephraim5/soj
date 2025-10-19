@@ -49,6 +49,16 @@
           "image": "./src/assets/splash.png",
           "resizeMode": "cover"
         }
+      ],
+      [
+        "expo-build-properties",
+        {
+          "android": {
+            "extraDependencies": [
+              "androidx.core:core-splashscreen:1.0.1"
+            ]
+          }
+        }
       ]
     ],
     "extra": {
