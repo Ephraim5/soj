@@ -59,7 +59,8 @@
             ]
           }
         }
-      ]
+      ],
+      "./plugins/ensureSplashTheme.js"
     ],
     "extra": {
       "eas": {

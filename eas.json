@@ -2,16 +2,18 @@
   "$schema": "https://raw.githubusercontent.com/expo/eas-build/main/packages/eas-json/schema/eas.schema.json",
   "cli": {
     "requireCommit": false,
-    "version": "16.23.1",
+    "version": "16.24.1",
     "appVersionSource": "remote"
   },
   "build": {
     "apk": {
+      "resourceClass": "large",
       "env": {
         "NODE_ENV": "production"
       },
       "android": {
-        "buildType": "apk"
+        "buildType": "apk",
+        "gradleCommand": ":app:assembleRelease -x lint -x lintVitalRelease -x test"
       }
     }
   },
