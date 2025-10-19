@@ -4,7 +4,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useFocusEffect, useNavigation, useRoute } from '@react-navigation/native';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@theme/colors';
-import { FinanceDoc, FinanceSummary, getFinanceSummary, listFinance } from '@api/finance';
+import { FinanceDoc, FinanceSummary, getFinanceSummary, listFinance } from '../../../api/finance';
 import Svg, { G, Path, Rect, Text as SvgText } from 'react-native-svg';
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 import { PRIMARY_BLUE } from '@screens/AuthScreens/SuperAdmin/styles';

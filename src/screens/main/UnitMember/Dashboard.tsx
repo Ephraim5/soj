@@ -27,7 +27,7 @@ import { listConversations } from '../../../api/messages';
 import { eventBus } from '../../../utils/eventBus';
 import { Colors } from '@theme/colors';
 import { PRIMARY_BLUE } from '@screens/AuthScreens/SuperAdmin/styles';
-import { getFinanceSummary } from '@api/finance';
+import { getFinanceSummary } from '../../../api/finance';
 
 type RootStackParamList = {
   DashboardMember: undefined;

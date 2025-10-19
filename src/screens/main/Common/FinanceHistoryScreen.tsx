@@ -3,12 +3,12 @@ import { View, Text, StyleSheet, SafeAreaView, StatusBar, TouchableOpacity, Scro
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { useIsFocused, useNavigation, useRoute } from '@react-navigation/native';
 import axios from 'axios';
-import { BASE_URl } from '@api/users';
+import { BASE_URl } from '../../../api/users';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@theme/colors';
-import { FinanceDoc, FinanceType, deleteFinance, listFinance, recordFinance, updateFinance } from '@api/finance';
+import { FinanceDoc, FinanceType, deleteFinance, listFinance, recordFinance, updateFinance } from '../../../api/finance';
 import * as Print from 'expo-print';
-import { listFinanceCategories, addFinanceCategory, renameFinanceCategory } from '@api/financeCategories';
+import { listFinanceCategories, addFinanceCategory, renameFinanceCategory } from '../../../api/financeCategories';
 
 
 type RouteParams = { unitId?: string; type: FinanceType };

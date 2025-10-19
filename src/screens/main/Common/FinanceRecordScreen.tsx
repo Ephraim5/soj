@@ -4,8 +4,8 @@ import { useNavigation, useRoute } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
 import { Colors } from '@theme/colors';
-import { FinanceType, recordFinance } from '@api/finance';
-import { listFinanceCategories, addFinanceCategory, renameFinanceCategory } from '@api/financeCategories';
+import { FinanceType, recordFinance } from '../../../api/finance';
+import { listFinanceCategories, addFinanceCategory, renameFinanceCategory } from '../../../api/financeCategories';
 
 type RouteParams = { unitId?: string; type: FinanceType };
 
